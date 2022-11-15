@@ -52,3 +52,32 @@ function changeListStyle()
 }
 
 changeListStyle()
+
+function updateImage()
+{
+    const imgElement = document.querySelector("#shoppingCart")
+    console.log(imgElement);
+    imgElement.src = "https://cdn-icons-png.flaticon.com/512/263/263142.png";
+    imgElement.width = 100;
+    imgElement.height = 100;
+    imgElement.alt = "shoppping cart icon"
+}
+
+updateImage();
+
+function findGreen()
+{
+    const listItems = document.querySelectorAll(".shopping li")
+    for (let i = 0 ; i < listItems.length; i++)
+    {
+        console.log(listItems[i]);
+        if (listItems[i].textContent.includes("green"))
+        {
+            listItems[i].classList.add("greenText");
+        }
+
+    }
+    
+}
+
+findGreen();
