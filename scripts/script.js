@@ -28,7 +28,7 @@ function populateList (list)
 {
     // for (let item of list)
     // {
-
+        
     // }
 
     for (let i = 0; i < list.length; i ++)
@@ -37,7 +37,18 @@ function populateList (list)
         const listItemElement = document.createElement("li");
         listItemElement.textContent = list[i];
         unorderedListElement.appendChild(listItemElement);
+        
     }
 }
 let shoppingList = ["cheese", "bread", "green pepper"];
 populateList(shoppingList);
+
+function changeListStyle()
+{
+    unorderedListElement.classList.add("squareList");
+    unorderedListElement.classList.remove("circleList");
+
+    // unorderedListElement.classList.replace("circleList", "squareList");
+}
+
+changeListStyle()
